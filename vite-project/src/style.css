@@ -61,7 +61,7 @@ input{
   padding-left: 10px;
 }
 
-.new-buttons{
+.new-buttons, .edit-buttons{
   margin: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -82,11 +82,9 @@ input{
 .search-icon{
   padding: 5px;
   position: absolute;
-  /* top: 0px;
-  left: 10px; */
   z-index: 1;
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
 }
 .search{
   margin: 1rem 2rem;
@@ -119,4 +117,16 @@ table{
 
 .content{
   padding: .5rem;
+}
+th{
+  padding: .5rem 1.5rem;
+  background-color: #c000ce;
+  color: white;
+  font-size: 3rem;
+}
+td{
+  padding: .5rem 1.5rem;
+  background-color: #c000ce;
+  color: white;
+  font-size: 3rem;
 }
