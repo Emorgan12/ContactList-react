@@ -21,19 +21,12 @@ function Delete() {
         });
 
     }
-
-    const handleID = (event) => {
+    const handleDelete = (event) => {
         event.preventDefault();
-        const id = event.target.elements.id.value;
-
-        fetch(BASE_URL + encodeURIComponent(id))
-        .then((response) => response.json())
-        .then((data) => setContacts(data))
-        .catch((error) => {
-            console.error('Error fetching data:', error);
-            setError(error.message);
-        });
-    }    
+        fetch(BASE_URL + encodeURIComponent(event.target.elements.id.value), {method: 'DELETE'})
+        
+    }
+    
     return (
     <>
     <form onSubmit={handleSearch} className="search">
@@ -45,22 +38,29 @@ function Delete() {
                     <td>Name</td>
                     <td>Number</td>
                 </tr>
-                {contacts.length == 1 ? contacts.map((contact, i) => {
+                {contacts.map((contact, i) => {
                     
-                        <tr className="contact">
+                        return(<tr className="contact">
                                     <td>{contact.id}</td>
                                     <td>{contact.name}</td>
                                     <td>{contact.number}</td>
                                 </tr>
                             
-                        }): 
-                        <tr className="contact">
-                            <td>{contacts.id}</td>
-                            <td>{contacts.name}</td>
-                            <td>{contacts.number}</td>
-                        </tr>}
+                        )})}
             </tbody>
         </table>
+        <div className="container">
+            <button className="edit-buttons" type="submit">Search</button>
+        </div>
+    </form>
+    <form onSubmit={handleDelete}>
+        <div>
+            <label htmlFor="id" className="labels">ID</label><br />
+            <input type="text" id="id" name="id" className="edit-inputs"/>
+        </div>
+        <div className="container">
+            <button className="new-buttons">Delete</button>
+        </div>
     </form>
     </>
     )
