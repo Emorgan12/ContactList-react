@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Contact.Api.Data;
 
 namespace Contact.Api
 {
@@ -50,6 +51,7 @@ namespace Contact.Api
             });
 
             services.AddHealthChecks();
+            services.AddScoped<IItemsRepository, ItemsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

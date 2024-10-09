@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4jsOrlCEz5A=",
+  "dgSpecHash": "Sk17/+/pgAg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\ContactAPI.csproj",
+  "projectFilePath": "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\ContactAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ecraig\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ecraig\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.6\\microsoft.data.sqlite.core.6.0.6.nupkg.sha512",

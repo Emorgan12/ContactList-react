@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\ContactAPI.csproj": {}
+    "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\ContactAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\ContactAPI.csproj": {
+    "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\ContactAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\ContactAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\ContactAPI.csproj",
         "projectName": "ContactAPI",
-        "projectPath": "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\ContactAPI.csproj",
+        "projectPath": "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\ContactAPI.csproj",
         "packagesPath": "C:\\Users\\ecraig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ecraig\\source\\repos\\ContactAPI\\obj\\",
+        "outputPath": "C:\\Users\\ecraig\\ContactList-react\\ContactAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ecraig\\AppData\\Roaming\\NuGet\\NuGet.Config",

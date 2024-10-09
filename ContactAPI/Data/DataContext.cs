@@ -2,12 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Contact.Api.Entities;
 
-public class DataContext : DbContext
+namespace Contact.Api.Data
 {
-    public DataContext(DbContextOptions<DataContext> options) : base(options)
+    public class DataContext : DbContext
     {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
 
+        }
+
+        public DbSet<Item> Items { get; set; }
     }
-
-    public DbSet<Item> Items { get; set; }
 }

@@ -24,15 +24,11 @@ namespace Contact.Api.Controllers
 
         // GET /items
         [HttpGet]
-        public async Task<IEnumerable<Item>> GetItemsAsync(string name = null)
+        public async Task<IEnumerable<Item>> GetItemsAsync()
         {
             var items = (await repository.GetItemsAsync())
                         .Select(item => item);
 
-            if (!string.IsNullOrWhiteSpace(name))
-            {
-                items = items.Where(item => item.Name.Contains(name, StringComparison.OrdinalIgnoreCase));
-            }
 
             logger.LogInformation($"{DateTime.UtcNow.ToString("hh:mm:ss")}: Retrieved {items.Count()} items");
 
