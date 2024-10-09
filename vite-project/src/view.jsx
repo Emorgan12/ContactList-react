@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 
-const BASE_URL = 'https://127.0.0.1:5000/items';
+const BASE_URL = 'http://127.0.0.1:5000/items';
 
 
 function View() {

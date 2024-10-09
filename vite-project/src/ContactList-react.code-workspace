@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "ContactList-react",
+		"path": "../.."
+	},
+	{
+		"name": "workspaces",
+		"path": "../../.."
+	}
+],
+  "settings": {}
+}

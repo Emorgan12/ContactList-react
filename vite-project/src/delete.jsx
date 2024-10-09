@@ -7,7 +7,7 @@ function Delete() {
 
     const [error, setError] = useState(null);
     const [contacts, setContacts] = useState([]);
-    const BASE_URL = 'https://127.0.0.1:5000/items/';
+    const BASE_URL = 'http://127.0.0.1:5000/items/';
     const handleSearch = (event) => {  
         event.preventDefault();
         const searchValue = event.target.elements.search.value;

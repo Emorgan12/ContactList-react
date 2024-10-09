@@ -6,7 +6,10 @@ ReactDOM.render(<Edit />, document.getElementById('app'));
 function Edit() {
     const [error, setError] = useState(null);
     const [contacts, setContacts] = useState([]);
-    const BASE_URL = 'https://127.0.0.1:5000/items/';
+    const [id, setId] = useState('');
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const BASE_URL = 'http://127.0.0.1:5000/items/';
     const handleSearch = (event) => {  
         event.preventDefault();
         const searchValue = event.target.elements.search.value;
@@ -36,17 +39,10 @@ function Edit() {
 
     const handleChange = (event) => {
         event.preventDefault();
-        const id = contacts.id;
 
-        fetch(BASE_URL + id, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name: event.target.elements.name.value,
-                number: event.target.elements.number.value,
-            }),
+        fetch(BASE_URL + id + ', ' + name + ', ' + number, {
+            method: 'PUT'
+            
         })
     }
 return (
@@ -63,12 +59,12 @@ return (
                     <td>Name</td>
                     <td>Number</td>
                 </tr>
-                {contacts.map((contact, i) => {
+                {contacts.map((contacts) => {
                     return (
                         <tr className="contact">
-                            <td>{contact.id}</td>
-                            <td>{contact.name}</td>
-                            <td>{contact.number}</td>
+                            <td>{contacts.id}</td>
+                            <td>{contacts.name}</td>
+                            <td>{contacts.number}</td>
                         </tr>
                     );
                 })}
@@ -81,24 +77,19 @@ return (
     </form>
     <div className="container" id= "contacts">
     </div>
-    <form onSubmit={handleID}>
-        <div>
-            <label htmlFor="id" className="labels">ID</label><br />
-            <input type="text" id="id" name="id" className="edit-inputs"/>
-        </div>
-        <div className="container">
-            <button className="edit-buttons" type="submit">Edit</button>
-        </div>
-    </form>
     <form onSubmit={handleChange}>
-        <div>
-            <label htmlFor="name" className="labels" value={contacts.name}>New Name</label><br />
-            <input type="text" id="name" name="name" className="edit-inputs"/>
-        </div>
-        <div>
-            <label htmlFor="number" className="labels" value={contacts.number} >New Number</label><br />
-            <input type="tel" id="number" name="number" className="edit-inputs"/>
-        </div>
+    <div>
+                <label htmlFor="id" className="labels">ID</label><br />
+                <input type="text" id="id" name="id" className="edit-inputs" onChange= {(e) => setId(e.target.value)}/>
+            </div>
+            <div>
+                <label htmlFor="name" className="labels">New Name</label><br />
+                <input type="text" id="name" name="name" className="edit-inputs" onChange={(e) => setName(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="number" className="labels">New Number</label><br />
+                <input type="tel" id="number" name="number" className="edit-inputs" onChange={(e) => setNumber(e.target.value)} />
+            </div>
         <div className="container">
             <button className="edit-buttons" type="submit">Save</button>
         </div>
